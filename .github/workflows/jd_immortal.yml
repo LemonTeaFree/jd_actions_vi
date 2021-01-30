@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_immortal
+name: jd_immortal_京东神仙书院(活动时间:2021-1-20至2021-2-5)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 6 * * *'
+    - cron: '30 22 * * *'
   watch:
     types: [started]
   repository_dispatch:
@@ -36,6 +36,9 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: run script
+        run: |
+          python3 sorryLXK.py
       - name: '运行 【京东神仙书院(活动时间:2021-1-20至2021-2-5)】'
         run: |
           node jd_immortal.js
@@ -62,3 +65,6 @@ jobs:
           BOOKSHOP_SHARECODES: ${{ secrets.BOOKSHOP_SHARECODES }}
           JD_CASH_SHARECODES: ${{ secrets.JD_CASH_SHARECODES }}
           JXNC_SHARECODES: ${{ secrets.JXNC_SHARECODES }}
+          JDSGMH_SHARECODES: ${{ secrets.JDSGMH_SHARECODES }}
+          JDNIAN_SHARECODES: ${{ secrets.JDNIAN_SHARECODES }}
+          JDSXSY_SHARECODES: ${{ secrets.JDSXSY_SHARECODES }}
