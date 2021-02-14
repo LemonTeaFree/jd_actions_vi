@@ -10,3 +10,12 @@
 [可迷核实崔](https://github.com/VidocqH/jd_scripts/commits/master)
 
 ~~If you know how to setup, you can use~~
+
+Fork would let the action's state be 'disabled_fork', here is how to re-enable actions:
+
+```bash
+node i @octokit/rest
+node actions_openner.js owner repo
+# Example:
+node actions_openner.js vidocqh jd_actions_vi
+```
